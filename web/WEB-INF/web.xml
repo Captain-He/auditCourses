@@ -3,30 +3,30 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
-        <welcome-file>index.htm</welcome-file>
-        <welcome-file>index.jsp</welcome-file>
-        <welcome-file>default.html</welcome-file>
-        <welcome-file>default.htm</welcome-file>
-        <welcome-file>default.jsp</welcome-file>
-    </welcome-file-list>
 
     <servlet>
-        <servlet-name>userServlet</servlet-name>
-        <servlet-class>com.zzu.auditWeb.control.userServlet</servlet-class>
-        <init-param>
-            <param-name>firstName</param-name>
-            <param-value>majintao</param-value>
-        </init-param>
-        <init-param>
-            <param-name>firstPassword</param-name>
-            <param-value>majintaop</param-value>
-        </init-param>
+        <servlet-name>userLoginServlet</servlet-name>
+        <servlet-class>com.servlet.UserLoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>userServlet</servlet-name>
-        <url-pattern>/userServlet</url-pattern>
+        <servlet-name>userLoginServlet</servlet-name>
+        <url-pattern>/userLoginServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>userRegisterServlet</servlet-name>
+        <servlet-class>com.servlet.UserRegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userRegisterServlet</servlet-name>
+        <url-pattern>/userRegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>updatePwdServlet</servlet-name>
+        <servlet-class>com.servlet.UpdatePwdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updatePwdServlet</servlet-name>
+        <url-pattern>/updatePwdServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
